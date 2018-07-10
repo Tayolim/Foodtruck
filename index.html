@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!--
+	I360 Web Design
+	Final Project
+
+-->
+
+<head>
+	<meta charset="utf-8">
+	<title>The Lonely Traveler</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Montserrat:100,300,400,500|Hind+Guntur|Martel+Sans:900" rel="stylesheet">
+
+	<!-- Font Awesome - For use in I360 -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<!-- Custom Styles -->
+	<link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+	<!--Full Screen Scroll:https://www.jqueryscript.net/animation/Minimalist-Full-Window-Scroll-Snap-Plugin-With-jQuery.html edited javascript so that it only works when screen is larger than 1200px width -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
+	<script type="text/javascript" src="fullpgScript.js" defer></script>
+
+	<!--[if lt IE 9]>
+    	<script src="components/html5shiv/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div id="one" class="one">
+		<!--for full screen script -->
+
+		<!--
+Navigation
+-->
+
+		<nav>
+			<div class="logo">
+				<a href="http://html.soic.indiana.edu/~taylim/Final%20Project/index.html"><img src="images/logo.png" alt="logo"></a>
+			</div>
+			<ul>
+				<li><a href="http://html.soic.indiana.edu/~taylim/Final%20Project/index.html#about">About</a></li>
+				<li><a href="http://html.soic.indiana.edu/~taylim/Final%20Project/menu.html">Menu</a></li>
+				<li><a href="http://html.soic.indiana.edu/~taylim/Final%20Project/merch.html">Merch</a></li>
+			</ul>
+		</nav>
+
+
+		<!--
+Simple Carousel Slideshow: https://www.w3schools.com/w3css/w3css_slideshow.asp
+-->
+
+		<header>
+			<img class="mySlides" src="images/foodtruck.jpg" alt="Food truck">
+			<img class="mySlides" src="images/friedchicken.jpg" alt="Fried Chicken">
+			<img class="mySlides" src="images/icewaffel.jpg" alt="Chinese Waffel Ice Cream">
+			<img class="mySlides" src="images/crowd.jpg" alt="Crowd enjoying The Lonely Traveler">
+			<img class="mySlides" src="images/logopage.png" alt="Where will we be?">
+		</header>
+	</div>
+<!--Images used throughout website includ:
+Fried Chicken Photo by Brian Chan on Unsplash
+Waffel icecream Photo by Toa Heftiba on Unsplash
+Dumpling Photo by Yuxiang Zhang on Unsplash
+People Photo by Samantha Gades on Unsplash
+Noodles Photo by James Sutton on Unsplash
+food truck Photo by Shari Sirotnak on Unsplash
+pineapple Photo by Pineapple Supply Co. on Unsplash -->
+
+
+	<!--
+Game Demo Placeholder:https://www.youtube.com/watch?v=e172o_SUsK0
+-->
+
+
+	<div id="two" class="two">
+		<!--for full screen script -->
+
+		<div class="game">
+			<h2>Game Demo</h2><br>
+			<iframe src="https://www.youtube.com/embed/e172o_SUsK0"></iframe>
+		</div>
+	</div>
+
+
+
+	<!--
+About
+-->
+
+
+	<div id="three" class="three">
+		<!--for full screen script -->
+
+		<div id='about'>
+			<!--for menu # -->
+			<div class='about'>
+				<div class="container">
+					<div class="content">
+						<h2>OUR STORY</h2>
+						<div id='ourstory'>
+							<p>The Lonely Traveler started off as a dream of cooking food for people in the kitchen. Our founder, Tasha, constantly joked about running a food truck as a retirement plan during her college years until her roommates suggested she doesn't wait for
+								retirement to do something she loves. Tasha decided to go on a gap year after college and finally start the food truck she she's been talking about all those years. The rest was history.</p>
+							<p>We started in B-Town's food truck friday, and then expanded our traveling to neighboring states. As we started growing our fan base for our famous karaage wrap and secret special sauce, we decided that we would go back to our roots and open up
+								a pop up shop in Bloomington. </p>
+							<p>We'll never be tied down though. We're going to one day go global and travel the world!</p>
+							<p>In the mean time, feel free to play our game and follow us on our journey through our social media.</p>
+							<a href="index.html#follow" class="button">FOLLOW US</a>
+						</div>
+					</div>
+					<img src="images/aboutus.jpg" alt="foodtruck">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--
+footer/Newsletter
+didn't use footer tag because this footer looks different from all the other footers.
+-->
+
+
+	<div id="follow" class="follow">
+		<div class="newsletter">
+			<h2>STAY UPDATED</h2>
+			<h3>Subscribe to follow our Journey!</h3>
+			<div class="subscribe">
+				<input type="text" name="address" size="40" value="Email Address">
+				<input type="submit" name="cart" value="SUBSCRIBE NOW">
+			</div>
+			<div class="socialMedia">
+				<a href="#"><i class="fab fa-twitter fa-1x"></i></a>
+				<a href="#"><i class="fab fa-facebook-f fa-1x"></i></a>
+				<a href="#"><i class="fab fa-instagram fa-1x"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<!--
+	Plugins: Slide show script below
+	https://www.w3schools.com/w3css/w3css_slideshow.asp
+	-->
+
+
+	<script>
+		var slideIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > x.length) {
+				slideIndex = 1
+			}
+			x[slideIndex - 1].style.display = "block";
+			setTimeout(carousel, 4000); // Change image every 4 seconds
+		}
+	</script>
+
+
+</body>
+
+</html>

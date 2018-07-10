@@ -1,0 +1,893 @@
+/* apply a natural box layout model to all elements */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* General */
+
+body {
+  background-color: white;
+  color: #424242;
+}
+
+
+.container {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3.0em 150px;
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 0;
+}
+
+img {
+  width: 50%;
+}
+/*Full Scroll*/
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.one, .three {
+/*  width: 100%;
+  height:100%;*/
+  background-color: white;
+}
+
+.two {
+  background-color: #FEDE02;
+  padding-bottom: 50px;
+  /*height:100%;*/
+}
+/* Utilities */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+/* Typography */
+
+/* https://fonts.google.com/
+Merriweather - light - headlines
+Montserrat - light, normal - body copy */
+
+h1, h2, h3 {
+  font-family:'Martel Sans','Arial', sans-serif;
+  color: #FEDE02;
+}
+
+h4{
+  color:#616161;
+
+}
+p, li, figcaption {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 100;
+  color: gray;
+  padding-bottom:0.8em;
+}
+
+
+h2 {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+h2+p {
+  margin-top: 0.5em;
+}
+
+.tagline {
+  margin: 0.5em 0 2.0em;
+  font-size: 14px;
+}
+
+/* Links */
+
+a:link, a:visited {
+  color: #D29700;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  color: #ed344a;
+}
+
+/* Buttons */
+
+.button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+  height: 54px;
+  line-height: 54px;
+  text-decoration: none;
+  color: #fff !important;
+  background-color: #D29700;
+  text-align: center;
+  letter-spacing: .5px;
+  padding: 0 2rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #FEDE02;
+}
+
+/* Utilities */
+
+.no-break {
+  white-space: nowrap;
+}
+
+/* Navigation */
+
+nav {
+  /*position: fixed;*/
+  background-color: white;
+  right: 0;
+  width: 100%;
+  z-index: 50;
+
+}
+
+
+.logo a{
+  display:flex;
+  justify-content: center;
+
+}
+.logo img {
+  max-width: 200px;
+  max-height:200px;
+  padding-top:10px;
+
+}
+
+
+nav ul {
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  justify-content:center;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding-left: 15px;
+  font-size: 15px;
+  font-family: sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav ul li a{
+  text-decoration: none;
+  font-weight: normal;
+}
+
+nav a:link{
+  color: #D29700;
+}
+
+a:hover {
+  color: #FEDE02;
+  border-bottom: 1px solid;
+}
+
+/*
+INDEX Carousel
+ */
+
+
+ .mySlides{
+   width:90%;
+   padding-top:0px;
+   margin:0 auto;
+ }
+
+
+/*
+INDEX Game
+*/
+
+.game{
+  display: flex;
+  flex-wrap:wrap;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 40px;
+  /*padding:50px 0;*/
+
+}
+.game h2{
+  color:white;
+  font-size: 80px;
+  text-transform:uppercase;
+}
+
+iframe{
+  width:800px;
+  height:500px;
+}
+/*
+INDEX about
+*/
+
+#about .container{
+  color: gray;
+  font-family: "Arial", sans-serif;
+}
+.about .content{
+  text-align: left;
+  padding-right: 10px;
+}
+
+.about img{
+  width:50%;
+}
+/*
+MERCH
+*/
+
+.merch {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.merch .container{
+  padding:0 13%; /* largest screen */
+}
+.merch section {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.merch figure {
+  margin: 0 0.5em 0;
+  padding: 0;
+  flex: 1 0 250px;
+}
+
+.merch .buynow:hover{
+  opacity: 0.7;
+}
+
+.buynow p{
+  padding:0.5em;
+  border: 1px;
+  border-style: solid;
+  color:white;
+  font-weight: bold;
+  background-color: #FFA676;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+ .merch h4, figcaption {
+  color: #616161;
+}
+
+.merch h1 {
+  padding-top: 25px;
+  color: white;
+  padding-bottom:50px;
+  font-size:100px;
+}
+
+
+figcaption {
+  margin: 0.5em;
+  text-align: left;
+  padding-left: 0.5em;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/*
+MERCH User Form
+*/
+
+
+#submission .container {
+  background-color: #FFA676;
+  background-image: url('../images/shopbg.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: bottom;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+#submission .container h2 {
+  margin: 0 0 1em 0;
+  color:white;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5em;
+  margin: 0.2em;
+  border-style: none;
+  border-radius:4px;
+  color: #555555;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 300;
+}
+
+form {
+  min-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+form button {
+  width: 70px;
+  padding: 5px;
+  margin: 5px 0;
+  align-self: flex-end;
+  border-radius: 4px;
+  border-style: none;
+  color: white;
+  background-color: #D29700;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 300;
+}
+
+form button:hover{
+  background-color: #FEDE02;
+}
+/*
+MERCH  Page
+*/
+#shop{
+  display:flex;
+  justify-content: center;
+  width:100%;
+  background-image: url('../images/shopbg.jpg');
+  height:100%;
+  background-repeat: no-repeat;
+  background-size:cover;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.merch .container{
+  margin-top:3em;
+}
+.addToCart{
+  display:flex;
+  flex-direction: row;
+  max-width:400px;
+}
+.addToCart input{
+
+  border-width: thin;
+  border-style: solid;
+  border-color: black;
+}
+.addToCart input[type=submit]{
+  background-color: black;
+  border-color: black;
+  color:white;
+  font-weight:300;
+}
+
+.addToCart input, textarea {
+  border-radius: 0;
+}
+
+.back p{
+  position: absolute;
+  background-color: white;
+  padding:1em;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  font-weight: 300;
+}
+.back p:hover{
+  color:white;
+  font-weight: 300;
+  border:none;
+  background-color: #FFA676;
+}
+.merchDes h2{
+  font-size:28px;
+  font-family:"Montserrat",'Arial', sans-serif;
+  font-weight:bold;
+  color:#424242;
+}
+.merchDes h5{
+  font-weight: 200;
+  font-size: 18px;
+  color:#FFA676;
+}
+/*
+MENU Food of the day
+*/
+.FOD{
+  margin:0 auto;
+}
+
+.FOD img{
+  width:100%;
+}
+.FOD h2{
+  text-align: center;
+  font-size: 80px;
+}
+th span{
+  font-size: 24px;
+  padding-left: 25%;
+  color:#D29700;
+}
+
+.CurrentMenu, .PastMenu{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 15%;
+  margin-right:15%;
+}
+.PastMenu{
+  margin-bottom:80px;
+}
+table{
+
+  font-family:"Montserrat",'Arial', sans-serif;
+}
+th{
+  text-align: left;
+  padding:0 20px;
+
+}
+td{
+  font-weight:lighter;
+  text-align: left;
+  padding:1em 20px;
+}
+
+/*
+INDEX newsletter
+*/
+#follow{
+  /*height:100%;*/
+  background-image:url("../images/icewaffel.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+
+}
+.newsletter{
+  padding:100px 0;
+  margin-top:50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap:wrap;
+}
+.newsletter input{
+  color:white;
+  font-weight:100;
+  border-color: white;
+  background-color:rgba(76, 175, 80, 0);
+}
+.newsletter h2,.newsletter h3, .socialMedia a:link{
+  color:white
+}
+.newsletter h3{
+  font-size:24px;
+  text-transform: uppercase;
+}
+.newsletter h2{
+  font-size: 80px;
+}
+.subscribe{
+  display: flex;
+  /*flex-wrap: wrap;*/
+  flex-direction:row;
+}
+.subscribe input[type=text]{
+  color:white;
+  font-weight:100;
+  border-color: white;
+  border-style: solid;
+  border-width: thin;
+  background-color:rgba(76, 76, 76, .30);
+}
+.subscribe input[type=submit]{
+  background-color: white;
+  color: #616161;
+  font-weight: 300;
+  width:35%;
+}
+.subscribe input[type=submit]:hover{
+  color:white;
+  font-weight:300;
+  background-color:#FEDE02;
+}
+.socialMedia{
+  padding-top:7em;
+}
+
+.socialMedia a:link, .socialMedia a:visited{
+  font-size:24px;
+  padding:0 5px;
+  color:white;
+}
+.socialMedia a:hover{
+  color:#FEDE02;
+  border-bottom: 0;
+}
+
+/*
+footer
+*/
+footer .socialMedia{
+  background-color: #FEDE02;
+  color:white;
+  display:flex;
+  justify-content: center;
+  padding-bottom: 7em;
+  padding-top:1em;
+}
+footer .socialMedia a:hover{
+  color:#D29700;
+}
+/* MEDIA QUERIES */
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 0) {
+  h1, h2 {
+    font-size: 24px;
+  }
+
+  p, p.tagline, figcaption, h4 {
+    font-size: 14px;
+  }
+  nav li a {
+    font-size: 14px;
+  }
+  .mySlides{}
+  .game h2{font-size:40px;}
+  iframe{
+    width:90%;
+    height:300px;
+    border:none;
+  }
+  .about .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+  }
+  #submission .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .about img {
+    display: flex;
+    align-self: center;
+    width:100%;
+  }
+
+  .about .tagline {
+    min-width: 90%;
+  }
+  .container {
+    padding: 3.0em 50px;
+  }
+  .newsletter{
+    padding:50px 0;
+    margin-top:0px;
+  }
+  .newsletter h2{
+    font-size: 60px;
+  }
+  .newsletter h3{
+    font-size:18px;
+  }
+  .newsletter input{
+    width:300px;
+  }
+  /* Menu Page */
+  .FOD h2{font-size:40px;}
+  .Entre td{
+    padding-left: 90px;
+  }
+  .Entre th span{
+    padding-left:30%;
+  }
+  .Menu1 td{
+    padding-left: 30px;
+  }
+  .Menu2 td{
+    padding-left: 60px;
+  }
+  /*Merch pg*/
+  .merch h1{
+    text-align: center;
+  }
+  /*MerchDes*/
+  .merchDes .content{
+    padding-right:0;
+  }
+  .merchDes .about{
+    margin-bottom: 50px;
+  }
+  .merchDes img{
+    width:50%;
+  }
+  .merchDes h2{font-size:28px;}
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+  h1, h2 {
+    margin-top: 40px;
+    font-size: 40px;
+  }
+  p, p.tagline, figcaption, h4 {
+    font-size: 14px;
+  }
+  .game h2{font-size:60px;}
+  iframe{
+    width:90%;
+    height:430px;
+  }
+
+  .about .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+  }
+  #submission .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+  }
+  .about .tagline {
+    min-width: 90%;
+  }
+  .container {
+    padding: 3.0em 50px;
+  }
+  .newsletter{
+    padding:50px 0;
+  }
+  .newsletter h2{
+    font-size: 60px;
+  }
+  .newsletter h3{
+    font-size:18px;
+  }
+  /* Menu Page */
+  .FOD h2{font-size:60px;}
+  th,td{font-size:21px;}
+  .Entre
+  .CurrentMenu, .PastMenu{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+  .Entre td{
+    padding-left:100px;
+  }
+  .Menu1 td{padding-left:33px;}
+  .Menu2 td{padding-left:73px; padding-right:20px;}
+
+  /*MerchDes*/
+  .merchDes .container{margin-bottom:60px;}
+  .merchDes img{width:65%;}
+  .merchDes h2{font-size:28px;}
+  .merchDes p{font-size:18px;}
+  .merchDes h5{font-size:21px;}
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+  h1, h2 {
+    margin-top: 40px;
+    font-size: 44px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p, p.tagline, figcaption, h4 {
+    font-size: 18px;
+  }
+  nav li a {
+    font-size: 16px;
+  }
+  .game{
+  }
+  .game h2{font-size:80px;}
+  iframe{
+    width:90%;
+    height:500px;
+  }
+  .about .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+  }
+
+  .about img {
+    display: flex;
+    align-self: center;
+    width:100%;
+  }
+  #submission .container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+  }
+  .about .tagline {
+    min-width: 90%;
+  }
+  .container {
+    padding: 3.0em 50px;
+  }
+  .newsletter{
+    padding:50px 0;
+    margin-top:0;
+  }
+  .newsletter h2{
+    font-size: 80px;
+  }
+  .newsletter h3{
+    font-size:24px;
+  }
+  .newsletter input{
+    width:400px;
+  }
+  /* Menu Page */
+  .FOD h2{font-size:80px;}
+  .Entre
+  .CurrentMenu, .PastMenu{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+  .Menu1 td{padding-left:33px;}
+  .Menu2 td{padding-left:50px; padding-right:35px;}
+  /*MerchDes*/
+  .merchDes .container{margin-bottom:70px;
+  }
+  .merchDes img{width:50%;}
+  .merchDes h2{font-size:40px;}
+  .merchDes p{font-size:21px;}
+  .merchDes h5{font-size:24px;}
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+h1, h2 {
+  margin-top: 40px;
+  font-size: 44px;
+}
+h3 {
+  font-size: 20px;
+}
+p, p.tagline, figcaption, h4 {
+  font-size: 18px;
+}
+nav li a {
+  font-size: 16px;
+}
+.one, .three {
+  width: 100%;
+  height:100%;
+  background-color: white;
+}
+
+.two {
+  background-color: #FEDE02;
+  padding-bottom: 50px;
+  height:100%
+}
+#follow{
+  height:100%;
+}
+.game{
+  margin-top:100px;
+}
+.game h2{font-size:80px;}
+iframe{
+  width:70%;
+  height:500px;
+}
+.about .container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  flex-grow: 0;
+}
+
+.about img {
+  display: flex;
+  align-self: center;
+  width:50%;
+}
+#submission .container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+.about .tagline {
+  min-width: 90%;
+}
+.container {
+  padding: 3.0em 50px;
+}
+.newsletter{
+  padding:200px 0;
+  margin-top:0;
+}
+.newsletter h2{
+  font-size: 80px;
+}
+.newsletter h3{
+  font-size:24px;
+}
+.newsletter input{
+  width:400px;
+}
+/* Menu Page */
+.FOD h2{font-size:80px;}
+td,th{
+  font-size:24px;
+}
+th span{
+  font-size:28px;
+}
+.Entre
+.CurrentMenu, .PastMenu{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.Menu1 td{padding-left:33px;}
+.Menu2 td{padding-left:50px; padding-right:35px;}
+
+}
